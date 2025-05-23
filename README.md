@@ -293,4 +293,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Transform your entire codebase into LLM-ready context with AI-powered intelligence. Perfect for Gemini 2.5 Pro's massive context window, but works brilliantly with any LLM.**
 
-⭐ **Star this repo if it helps you build better software faster!**
+⭐ **Star this repo if it helps you build better software faster!**# repo-to-text-mcp-server
