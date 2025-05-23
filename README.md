@@ -1,8 +1,8 @@
-# Repo-to-Text MCP Server
+# Repo-to-Text MCP Server with AI Task Generation (Shotgun Mode)
 
-> **The Ultimate Bridge Between Your Codebase and LLMs**
+> **The Ultimate Bridge Between Your Codebase, LLMs, and Implementation**
 
-A powerful MCP (Model Context Protocol) server that converts entire repositories into LLM-friendly text format with AI-powered analysis and intelligent filtering. Perfect for Gemini 2.5 Pro's massive 2M token context window, but works great with any LLM.
+A powerful MCP (Model Context Protocol) server that converts entire repositories into LLM-friendly text format with AI-powered analysis, intelligent filtering, and **Gemini-powered implementation task generation**. Like Shotgun, but better - it generates complete implementation directives for Cursor, Windsurf, and Claude Desktop.
 
 ![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -17,8 +17,9 @@ A powerful MCP (Model Context Protocol) server that converts entire repositories
 | **Intelligence** | None | None | ✅ **AI-powered analysis** |
 | **Multi-format** | Shotgun only | Limited | ✅ **XML, Shotgun, Markdown** |
 | **Token estimation** | None | None | ✅ **Multi-provider support** |
-| **Patch application** | Manual | None | ✅ **Automated with dry-run** |
-| **Project awareness** | Generic | Generic | ✅ **Framework-specific optimization** |
+| **Task Generation** | Manual | None | ✅ **Gemini-powered directives** |
+| **Implementation Plan** | None | None | ✅ **Complete workflow automation** |
+| **IDE Integration** | Basic | None | ✅ **Cursor/Windsurf/Claude optimized** |
 
 ## ✨ Key Features
 
@@ -95,11 +96,17 @@ Generate repo context for /path/to/my/code in XML format
 ```
 Creates clean, structured text perfect for any LLM.
 
-### 3. Estimate Token Usage
+### 3. Generate Implementation Plan (NEW!)
 ```
-Estimate tokens for Gemini 2.5 Pro
+Generate implementation plan for /path/to/my/code with requirements: "Add user authentication"
 ```
-Know exactly how much context you're using.
+Get complete Gemini prompt for generating implementation directives.
+
+### 4. Parse AI Response
+```
+Parse this Gemini response for Cursor: [paste response]
+```
+Convert AI output into IDE-specific implementation steps.
 
 ## 🛠 Available Tools
 
@@ -112,6 +119,103 @@ Know exactly how much context you're using.
 | `suggest_exclusions` | AI-powered exclusion recommendations | Noise reduction |
 | `chunk_for_llm` | Smart chunking for model limits | Handling huge repos |
 | `apply_patch` | Apply LLM responses to codebase | Completing the workflow |
+| **`generate_implementation_tasks`** | **Generate Gemini prompts for implementation** | **Creating implementation plans** |
+| **`parse_gemini_response`** | **Parse Gemini's response into IDE directives** | **Converting AI output to tasks** |
+| **`generate_implementation_plan`** | **Complete Shotgun-style workflow** | **End-to-end implementation** |
+
+## 🎯 NEW: Shotgun-Style Implementation Generation
+
+This MCP server now includes powerful task generation features inspired by Shotgun, but better:
+
+### The Complete Workflow
+
+1. **Describe Your Requirements**
+   ```
+   "I need to add user authentication with JWT tokens to my Express app"
+   ```
+
+2. **Generate Implementation Plan**
+   ```
+   Use generate_implementation_plan for /path/to/project with requirements: "Add JWT authentication..."
+   ```
+
+3. **Get Gemini-Optimized Prompt**
+   - Automatically analyzes your entire codebase
+   - Creates a comprehensive prompt for Gemini 2.5 Pro
+   - Includes project context, structure, and requirements
+
+4. **Parse Gemini's Response**
+   ```
+   Parse this Gemini response for Cursor IDE...
+   ```
+
+5. **Get IDE-Specific Directives**
+   - **Cursor/Windsurf**: Step-by-step implementation guide
+   - **Claude Desktop**: Task breakdown with priorities
+   - **Generic**: Structured JSON for any tool
+
+### Example: Adding Authentication to Express App
+
+```bash
+# Step 1: Analyze the project
+"Analyze my Express project at /Users/me/myapp"
+
+# Step 2: Generate implementation tasks
+"Generate implementation tasks for /Users/me/myapp with requirements: 
+Add JWT-based authentication with:
+- User registration and login endpoints
+- Password hashing with bcrypt
+- JWT token generation and validation
+- Protected route middleware
+- User profile endpoint"
+
+# Step 3: Copy prompt to Gemini 2.5 Pro
+# (The tool provides a complete prompt)
+
+# Step 4: Parse Gemini's response
+"Parse this Gemini response for Cursor:
+[Paste Gemini's response here]"
+
+# Result: Complete implementation directives!
+```
+
+### Output Example for Cursor
+
+```markdown
+# 🎯 CURSOR IMPLEMENTATION DIRECTIVES
+
+## 📋 TASK OVERVIEW
+Implement JWT authentication system for Express application...
+
+## 🏗️ ARCHITECTURE CHANGES
+- Add auth middleware directory
+- Create user model with Mongoose
+- Add authentication routes
+- Implement JWT utility functions
+
+## 📝 IMPLEMENTATION STEPS
+
+### Step 1: Install Dependencies
+```bash
+npm install jsonwebtoken bcrypt express-validator
+```
+
+### Step 2: Create User Model
+Create `models/User.js`:
+```javascript
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+
+const userSchema = new mongoose.Schema({
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  // ... complete implementation
+});
+```
+
+### Step 3: Create Auth Middleware
+[... detailed implementation steps ...]
+```
 
 ## 📝 Output Formats
 
