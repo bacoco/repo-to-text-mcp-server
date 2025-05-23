@@ -44,6 +44,7 @@ This MCP server is optimized for Gemini 2.5 Pro's **2 million token context**:
 ### Prerequisites
 - Python 3.7+
 - Claude Desktop (for MCP integration)
+- Gemini 2.5 Pro access (for task generation features)
 
 ### Quick Install
 
@@ -155,6 +156,12 @@ This MCP server now includes powerful task generation features inspired by Shotg
    - **Generic**: Structured JSON for any tool
 
 ### Example: Adding Authentication to Express App
+
+**Important Note**: This tool generates prompts for Gemini 2.5 Pro. You need to:
+1. Copy the generated prompt from this tool
+2. Paste it into Gemini 2.5 Pro (via web interface or API)
+3. Copy Gemini's response back
+4. Use the `parse_gemini_response` tool to convert it to IDE directives
 
 ```bash
 # Step 1: Analyze the project

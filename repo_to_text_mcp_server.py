@@ -924,7 +924,7 @@ async def main():
             write_stream,
             InitializationOptions(
                 server_name="repo-to-text",
-                server_version="2.0.0",
+                server_version="2.0.0",  # Major version bump for Shotgun functionality
                 capabilities=server.get_capabilities(
                     notification_options=None,
                     experimental_capabilities={}
