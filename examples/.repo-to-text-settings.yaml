@@ -1,0 +1,80 @@
+# Example .repo-to-text-settings.yaml
+# Place this in your project root for custom exclusions
+
+# Import gitignore rules (default: true)
+gitignore-import-and-ignore: true
+
+# Exclude from both tree and content
+ignore-tree-and-content:
+  - ".repo-to-text-settings.yaml"
+  - "*.log"
+  - "tmp/"
+  - "temp/"
+  - "cache/"
+  - "*.cache"
+  - "node_modules/"
+  - "__pycache__/"
+  - ".pytest_cache/"
+  - "venv/"
+  - ".venv/"
+  - "env/"
+  - ".env/"
+  - "dist/"
+  - "build/"
+  - "target/"
+  - "*.pyc"
+  - "*.pyo"
+  - "*.class"
+  - "*.o"
+  - "*.so"
+  - "*.exe"
+  - "*.dll"
+  - "*.obj"
+  - "*.bin"
+  - "*.deb"
+  - "*.rpm"
+  - "*.dmg"
+  - "*.msi"
+  # Media files (usually not needed for code analysis)
+  - "*.png"
+  - "*.jpg"
+  - "*.jpeg"
+  - "*.gif"
+  - "*.bmp"
+  - "*.ico"
+  - "*.svg"
+  - "*.mp3"
+  - "*.mp4"
+  - "*.avi"
+  - "*.mov"
+  - "*.wav"
+  - "*.pdf"
+  # Archives
+  - "*.zip"
+  - "*.tar"
+  - "*.gz"
+  - "*.bz2"
+  - "*.7z"
+  - "*.rar"
+
+# Exclude from content only (still show in tree)
+ignore-content-only:
+  - "README.md"  # Often very long
+  - "LICENSE"
+  - "CHANGELOG*"
+  - "package-lock.json"
+  - "yarn.lock"
+  - "Pipfile.lock"
+  - "poetry.lock"
+  - "go.sum"
+
+# Force include these patterns (overrides exclusions)
+force-include:
+  - "Dockerfile"
+  - "docker-compose.yml"
+  - "pyproject.toml"
+  - "package.json"
+  - "requirements.txt"
+  - "Cargo.toml"
+  - "go.mod"
+  - "Makefile"

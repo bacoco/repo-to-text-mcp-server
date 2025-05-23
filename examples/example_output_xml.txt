@@ -1,0 +1,77 @@
+<repo-to-text>
+Directory: sample-react-app
+
+Directory Structure:
+<directory_structure>
+sample-react-app/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   └── Footer.jsx
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── package.json
+└── README.md
+</directory_structure>
+
+<content full_path="package.json">
+{
+  "name": "sample-react-app",
+  "version": "0.1.0",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  }
+}
+</content>
+
+<content full_path="src/App.js">
+import React from 'react';
+import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <main>
+        <h1>Welcome to My React App</h1>
+        <p>This is a sample application.</p>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+</content>
+
+<content full_path="src/components/Header.jsx">
+import React from 'react';
+
+const Header = () => {
+  return (
+    <header>
+      <nav>
+        <h2>My App</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
+</content>
+</repo-to-text>
